@@ -1,4 +1,4 @@
-package tecno.maub.tec.quizapp;
+package com.quizapp;
 
 public class Launcher {
     public static void main(String[] args) {

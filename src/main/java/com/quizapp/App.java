@@ -1,7 +1,7 @@
-package tecno.maub.tec.quizapp;
+package com.quizapp;
 
+import com.quizapp.screens.*;
 import io.github.hugoperlin.navigatorfx.*;
-import tecno.maub.tec.quizapp.screens.*;
 
 public class App extends BaseAppNavigator{
     @Override

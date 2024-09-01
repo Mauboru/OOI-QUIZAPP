@@ -1,4 +1,4 @@
-package tecno.maub.tec.quizapp.models;
+package com.quizapp.models;
 
 import java.util.*;
 
