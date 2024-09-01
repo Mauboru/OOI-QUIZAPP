@@ -1,13 +1,25 @@
 package tecno.maub.tec.quizapp;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import io.github.hugoperlin.navigatorfx.*;
+
+public class App extends BaseAppNavigator{
+    @Override
+    public void init() throws Exception {
+        super.init();
+    }
+
+    @Override
+    public String getHome() {
+        return "HOME";
+    }
+
+    @Override
+    public String getAppTitle() {
+        return "Quiz App";
+    }
+
+    @Override
+    public void registrarTelas() {
+        
     }
 }
