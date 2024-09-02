@@ -6,12 +6,14 @@ public class ControlQuizz {
     private ArrayList<Question> questions;
     private int actualQuestion, correctAnswers, wrongAnswers;
 
-    public ControlQuizz(ArrayList<Question> questions, int actualQuestion, int correctAnswers, int wrongAnswers) {
-        Collections.shuffle(questions);
-        this.questions = questions;
-        this.actualQuestion = 0;
-        this.correctAnswers = 0;
-        this.wrongAnswers = 0;
+    public ControlQuizz(ArrayList<Question> questions) {
+        this.questions = new ArrayList<>();
+    }
+
+    public void addQuestion(Question question) {
+        if (!questions.contains(question)) {
+            questions.add(question);
+        }
     }
 
     public ArrayList<Question> getQuestions() {

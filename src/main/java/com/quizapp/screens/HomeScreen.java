@@ -1,5 +1,6 @@
 package com.quizapp.screens;
 
+import com.quizapp.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -11,6 +12,6 @@ public class HomeScreen {
 
     @FXML
     void goToRegister(ActionEvent event) {
-        System.out.println("do anything register");
+        App.pushScreen("REGISTER");
     }
 }

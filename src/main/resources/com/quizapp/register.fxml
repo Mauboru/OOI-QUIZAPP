@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizapp.screens.RegisterScreen">
+   <children>
+      <TextField fx:id="tfEnunciate" alignment="CENTER" layoutX="57.0" layoutY="69.0" promptText="Insira o enunciado" />
+      <TextField fx:id="tfCorrect" alignment="CENTER" layoutX="57.0" layoutY="110.0" promptText="resposta correta" />
+      <TextField fx:id="tfWrong1" alignment="CENTER" layoutX="57.0" layoutY="153.0" promptText="resposta errada 1" />
+      <TextField fx:id="tfWrong3" alignment="CENTER" layoutX="57.0" layoutY="246.0" promptText="resposta errada 3" />
+      <TextField fx:id="tfWrong2" alignment="CENTER" layoutX="57.0" layoutY="200.0" promptText="resposta errada 2" />
+      <Button fx:id="btCancel" layoutX="57.0" layoutY="313.0" mnemonicParsing="false" onAction="#backMenu" text="Voltar" />
+      <Button fx:id="btRegister" layoutX="160.0" layoutY="313.0" mnemonicParsing="false" onAction="#registerQuestion" text="Cadastrar" />
+   </children>
+</Pane>

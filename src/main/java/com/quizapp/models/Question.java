@@ -8,8 +8,7 @@ public class Question {
     private final String[] othersAlternatives;
     private final ArrayList<String> allsAlternatives;
 
-    public Question(String statement, String correctAnswer, String[] othersAlternatives,
-            ArrayList<String> allsAlternatives) {
+    public Question(String statement, String correctAnswer, String[] othersAlternatives) {
         this.statement = statement;
         this.correctAnswer = correctAnswer;
         this.othersAlternatives = othersAlternatives;
