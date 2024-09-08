@@ -12,6 +12,6 @@
       <TextField fx:id="tfWrong3" alignment="CENTER" layoutX="57.0" layoutY="246.0" promptText="resposta errada 3" />
       <TextField fx:id="tfWrong2" alignment="CENTER" layoutX="57.0" layoutY="200.0" promptText="resposta errada 2" />
       <Button fx:id="btCancel" layoutX="57.0" layoutY="313.0" mnemonicParsing="false" onAction="#backMenu" text="Voltar" />
-      <Button fx:id="btRegister" layoutX="160.0" layoutY="313.0" mnemonicParsing="false" onAction="#registerQuestion" text="Cadastrar" />
+      <Button fx:id="btRegister" layoutX="160.0" layoutY="313.0" mnemonicParsing="false" onAction="#registerQuestion" text="Confirmar" />
    </children>
 </Pane>

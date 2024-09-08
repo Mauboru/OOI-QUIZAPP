@@ -1,5 +1,9 @@
 package com.quizapp.screens;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import com.quizapp.App;
 import com.quizapp.models.*;
 import javafx.event.ActionEvent;
@@ -38,10 +42,35 @@ public class RegisterScreen {
         tfWrong1.clear();
         tfWrong2.clear();
         tfWrong3.clear();
+
+        saveQuestionToFile(question);
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Registro de Questão");
+        alert.setHeaderText(null);
+        alert.setContentText("Questão registrada com sucesso!");
+        alert.showAndWait();
     }
 
     @FXML
     private void backMenu(ActionEvent event) {
         App.popScreen();
+    }
+
+    // Functions No FXML
+    private void saveQuestionToFile(Question question) {
+        String folderPath = "questions";
+        String filePath = folderPath + "/questions.txt";
+        File folder = new File(folderPath);
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            writer.write(question.toString());
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
