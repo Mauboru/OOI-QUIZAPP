@@ -17,8 +17,8 @@ public class ControlQuizz {
 
     public void restart() {
         Collections.shuffle(this.questions);
-        setCorrectAnswers(0);
-        setWrongAnswers(0);
+        setHits(0);
+        setErrors(0);
         setActualQuestion(0);
     }
 
@@ -31,7 +31,7 @@ public class ControlQuizz {
     }
 
     public int nextQuestion() {
-        if(hasNextQuestion()) {
+        if (hasNextQuestion()) {
             this.actualQuestion++;
         }
         return this.actualQuestion;

@@ -14,7 +14,7 @@
       <Button fx:id="btWrongAnswer1" layoutX="117.0" layoutY="130.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 2" />
       <Button fx:id="btWrongAnswer2" layoutX="117.0" layoutY="169.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 3" />
       <Button fx:id="btWrongAnswer3" layoutX="117.0" layoutY="206.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 4" />
-      <Button fx:id="btRestart" layoutX="221.0" layoutY="357.0" mnemonicParsing="false" onAction="#reiniciar" text="Reiniciar" />
+      <Button fx:id="btRestart" layoutX="221.0" layoutY="357.0" mnemonicParsing="false" onAction="#restart" text="Reiniciar" />
       <Text fx:id="txtResult" fill="black" layoutX="77.0" layoutY="267.0" text="Resultado será exibido aqui" />
       <VBox layoutX="8.0" layoutY="8.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #DCDCDC; -fx-border-radius: 5; -fx-border-color: black;">
          <children>

@@ -29,6 +29,7 @@ public class App extends BaseAppNavigator{
     public void registrarTelas() {
         registraTela("HOME", new ScreenRegistryFXML(App.class, "home.fxml", o-> new HomeScreen()));
         registraTela("REGISTER", new ScreenRegistryFXML(App.class, "register.fxml", o-> new RegisterScreen(controlQuizz)));
+        // Passar o controlQuizz para o construtor de quizzscreen
         registraTela("QUIZ", new ScreenRegistryFXML(App.class, "quiz.fxml", o-> new QuizzScreen()));
     }
 }

@@ -23,6 +23,7 @@ public class QuizzScreen {
 
     @FXML
     private void initialize() {
+        initGame();
         updateComponents();
     }
 
@@ -71,9 +72,10 @@ public class QuizzScreen {
     }
 
     @FXML
-    private void reiniciar(ActionEvent event) {
+    private void restart(ActionEvent event) {
         controlQuizz.restart();
         updateComponents();
+        initGame();
     }
 
     public void updateComponents() {
@@ -87,10 +89,7 @@ public class QuizzScreen {
         btWrongAnswer3.setText(questions.get(3));
         txtResult.setText("---------");
 
-        btCorrectAnswer.setDisable(false);
-        btWrongAnswer1.setDisable(false);
-        btWrongAnswer2.setDisable(false);
-        btWrongAnswer3.setDisable(false);
+        enableAlternatives();
 
         txtCorrect.setText("Acertos: " + controlQuizz.getHits());
         txtErrors.setText("Erros: " + controlQuizz.getErrors());
@@ -105,6 +104,13 @@ public class QuizzScreen {
         btWrongAnswer3.setDisable(true);
     }
 
+    public void enableAlternatives() {
+        btCorrectAnswer.setDisable(false);
+        btWrongAnswer1.setDisable(false);
+        btWrongAnswer2.setDisable(false);
+        btWrongAnswer3.setDisable(false);
+    }
+
     private void endGame() {
         txtStatement.setVisible(false);
         btCorrectAnswer.setVisible(false);
@@ -113,5 +119,15 @@ public class QuizzScreen {
         btWrongAnswer3.setVisible(false);
         btNext.setVisible(false);
         btRestart.setVisible(true);
+    }
+
+    private void initGame() {
+        txtStatement.setVisible(true);
+        btCorrectAnswer.setVisible(true);
+        btWrongAnswer1.setVisible(true);
+        btWrongAnswer2.setVisible(true);
+        btWrongAnswer3.setVisible(true);
+        btNext.setVisible(true);
+        btRestart.setVisible(false);
     }
 }
