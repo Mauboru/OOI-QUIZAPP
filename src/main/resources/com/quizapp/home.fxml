@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizapp.screens.HomeScreen">
    <children>
-      <Button layoutX="118.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToQuizz" text="Quizz" />
-      <Button layoutX="113.0" layoutY="185.0" mnemonicParsing="false" onAction="#goToRegister" text="Register" />
+      <Button layoutX="112.0" layoutY="159.0" mnemonicParsing="false" onAction="#goToQuizz" text="Iniciar Quiz" />
+      <Button layoutX="103.0" layoutY="216.0" mnemonicParsing="false" onAction="#goToRegister" text="Cadastrar Quiz" />
+      <Text layoutX="15.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIZ APP 2024">
+         <font>
+            <Font name="Rockwell Extra Bold" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="231.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Versão 1.0" />
    </children>
 </Pane>

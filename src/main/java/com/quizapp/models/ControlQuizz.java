@@ -1,9 +1,7 @@
 package com.quizapp.models;
 
 import java.util.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class ControlQuizz {
     private ArrayList<Question> questions;
@@ -20,6 +18,10 @@ public class ControlQuizz {
         setHits(0);
         setErrors(0);
         setActualQuestion(0);
+    }
+
+    public boolean hasQuestions() {
+        return !questions.isEmpty();
     }
 
     public boolean hasNextQuestion() {
@@ -51,32 +53,8 @@ public class ControlQuizz {
         }
     }
 
-    public void setQuestions(ArrayList<Question> questions) {
-        this.questions = questions;
-    }
-
-    public int getActualQuestion() {
-        return actualQuestion;
-    }
-
     public void setActualQuestion(int actualQuestion) {
         this.actualQuestion = actualQuestion;
-    }
-
-    public int getCorrectAnswers() {
-        return correctAnswers;
-    }
-
-    public void setCorrectAnswers(int correctAnswers) {
-        this.correctAnswers = correctAnswers;
-    }
-
-    public int getWrongAnswers() {
-        return wrongAnswers;
-    }
-
-    public void setWrongAnswers(int wrongAnswers) {
-        this.wrongAnswers = wrongAnswers;
     }
 
     public int getHits() {
@@ -120,7 +98,9 @@ public class ControlQuizz {
                 addQuestion(question);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Não foi possível ler o arquivo de questões.");
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro ao processar o arquivo de questões: " + e.getMessage());
         }
     }
 

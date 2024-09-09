@@ -11,18 +11,19 @@ import javafx.scene.text.Text;
 public class QuizzScreen {
     private ControlQuizz controlQuizz;
 
+    public QuizzScreen(ControlQuizz controlQuizz) {
+        this.controlQuizz = controlQuizz;
+    }
+
     @FXML
     private Text txtStatement, txtResult, txtErrors, txtCorrect;
 
     @FXML
     private Button btCorrectAnswer, btWrongAnswer1, btWrongAnswer2, btWrongAnswer3, btBack, btNext, btRestart;
 
-    public QuizzScreen() {
-        controlQuizz = new ControlQuizz(null);
-    }
-
     @FXML
     private void initialize() {
+        controlQuizz.restart();
         initGame();
         updateComponents();
     }

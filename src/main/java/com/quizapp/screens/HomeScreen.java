@@ -4,14 +4,28 @@ import com.quizapp.App;
 import com.quizapp.models.ControlQuizz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class HomeScreen {
-    ControlQuizz controlQuizz;
+    private ControlQuizz controlQuizz;
+
+    public HomeScreen(ControlQuizz controlQuizz) {
+        this.controlQuizz = controlQuizz;
+    }
 
     @FXML
     void goToQuizz(ActionEvent event) {
-        // Inserir try catch para caso o arquivo nao exista
-        App.pushScreen("QUIZ");
+        if (controlQuizz != null && controlQuizz.hasQuestions()) {
+            App.pushScreen("QUIZ");
+        } else {
+            Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Aviso");
+            alert.setHeaderText("Nenhuma Questão Disponível");
+            alert.setContentText(
+                    "Não há questões disponíveis para o quiz. Por favor, adicione questões e tente novamente.");
+            alert.showAndWait();
+        }
     }
 
     @FXML

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -9,17 +10,55 @@
    <children>
       <Button fx:id="btBack" layoutX="15.0" layoutY="357.0" mnemonicParsing="false" onAction="#backMenu" text="Voltar" />
       <Button fx:id="btNext" layoutX="217.0" layoutY="357.0" mnemonicParsing="false" onAction="#nextQuestion" text="Confirmar" />
-      <Text fx:id="txtStatement" layoutX="122.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enunciate" textOrigin="CENTER" />
-      <Button fx:id="btCorrectAnswer" layoutX="117.0" layoutY="92.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 1" />
-      <Button fx:id="btWrongAnswer1" layoutX="117.0" layoutY="130.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 2" />
-      <Button fx:id="btWrongAnswer2" layoutX="117.0" layoutY="169.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 3" />
-      <Button fx:id="btWrongAnswer3" layoutX="117.0" layoutY="206.0" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 4" />
-      <Button fx:id="btRestart" layoutX="221.0" layoutY="357.0" mnemonicParsing="false" onAction="#restart" text="Reiniciar" />
-      <Text fx:id="txtResult" fill="black" layoutX="77.0" layoutY="267.0" text="Resultado será exibido aqui" />
       <VBox layoutX="8.0" layoutY="8.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #DCDCDC; -fx-border-radius: 5; -fx-border-color: black;">
          <children>
             <Text fx:id="txtErrors" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="ERRO" />
             <Text fx:id="txtCorrect" fill="#40ff00" strokeType="OUTSIDE" strokeWidth="0.0" text="ACERTOS" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="24.0" layoutY="57.0" prefHeight="286.0" prefWidth="252.0" snapToPixel="false">
+         <children>
+            <Text fx:id="txtStatement" blendMode="DARKEN" strokeWidth="0.0" text="Enunciate" textAlignment="CENTER" textOrigin="CENTER">
+               <font>
+                  <Font name="Bell MT" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Text>
+            <Button fx:id="btCorrectAnswer" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 1">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btWrongAnswer1" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 2">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btWrongAnswer2" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 3">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btWrongAnswer3" mnemonicParsing="false" onAction="#verifyAnswer" text="Option 4">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btRestart" mnemonicParsing="false" onAction="#restart" text="Reiniciar">
+               <VBox.margin>
+                  <Insets bottom="15.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Text fx:id="txtResult" fill="black" fontSmoothingType="LCD" text="Resultado será exibido aqui" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="10.0" />
+               </VBox.margin>
+            </Text>
          </children>
       </VBox>
    </children>
