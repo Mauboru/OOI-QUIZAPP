@@ -57,7 +57,6 @@ public class RegisterScreen {
         App.popScreen();
     }
 
-    // Functions No FXML
     private void saveQuestionToFile(Question question) {
         String folderPath = "questions";
         String filePath = folderPath + "/questions.txt";
@@ -67,8 +66,13 @@ public class RegisterScreen {
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
-            writer.write(question.toString());
-            writer.newLine();
+            writer.write("Enunciado: " + question.getStatement() + "\n");
+            writer.write("Correta: " + question.getCorrectAnswer() + "\n");
+            writer.write("Outras Alternativas:\n");
+            for (String alternative : question.getOthersAlternatives()) {
+                writer.write("- " + alternative + "\n");
+            }
+            writer.write("\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
